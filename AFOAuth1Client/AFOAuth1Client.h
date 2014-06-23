@@ -24,7 +24,7 @@ typedef void (^AFServiceProviderRequestCompletionBlock)();
 
 @class AFOAuth1Token;
 
-@interface AFOAuth1Client : NSObject <NSCoding, NSCopying>
+@interface AFOAuth1Client : AFHTTPRequestOperationManager 
 @property (readwrite, nonatomic, copy) NSURL *url;
 @property (readwrite, nonatomic, copy) NSString *key;
 @property (readwrite, nonatomic, copy) NSString *secret;
