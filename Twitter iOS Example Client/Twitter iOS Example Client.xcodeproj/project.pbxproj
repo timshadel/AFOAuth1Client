@@ -24,8 +24,8 @@
 		3B3A8B5D1693A877005B1AAC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A8B5C1693A877005B1AAC /* Default.png */; };
 		3B3A8B5F1693A877005B1AAC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A8B5E1693A877005B1AAC /* Default@2x.png */; };
 		3B3A8B611693A877005B1AAC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A8B601693A877005B1AAC /* Default-568h@2x.png */; };
+		BC7959261992324000AE7FD0 /* AF2OAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7959251992324000AE7FD0 /* AF2OAuth1Client.m */; };
 		F83DA16117C5799C006C3DB5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83DA16017C5799C006C3DB5 /* Security.framework */; };
-		F8E8694716ADDA1900CD328E /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E8694616ADDA1900CD328E /* AFOAuth1Client.m */; };
 		F8E8694E16ADDA3700CD328E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E8694D16ADDA3700CD328E /* SystemConfiguration.framework */; };
 		F8E8695016ADDA3D00CD328E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E8694F16ADDA3D00CD328E /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
@@ -62,9 +62,9 @@
 		3B3A8B5C1693A877005B1AAC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3B3A8B5E1693A877005B1AAC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3B3A8B601693A877005B1AAC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BC7959241992324000AE7FD0 /* AF2OAuth1Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AF2OAuth1Client.h; sourceTree = "<group>"; };
+		BC7959251992324000AE7FD0 /* AF2OAuth1Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AF2OAuth1Client.m; sourceTree = "<group>"; };
 		F83DA16017C5799C006C3DB5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F8E8694516ADDA1900CD328E /* AFOAuth1Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAuth1Client.h; sourceTree = "<group>"; };
-		F8E8694616ADDA1900CD328E /* AFOAuth1Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAuth1Client.m; sourceTree = "<group>"; };
 		F8E8694D16ADDA3700CD328E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F8E8694F16ADDA3D00CD328E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -167,23 +167,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BC7959231992324000AE7FD0 /* AF2OAuth1Client */ = {
+			isa = PBXGroup;
+			children = (
+				BC7959241992324000AE7FD0 /* AF2OAuth1Client.h */,
+				BC7959251992324000AE7FD0 /* AF2OAuth1Client.m */,
+			);
+			name = AF2OAuth1Client;
+			path = ../AF2OAuth1Client;
+			sourceTree = "<group>";
+		};
 		F8E8694316ADDA0F00CD328E /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				F8E8694416ADDA1900CD328E /* AFOAuth1Client */,
+				BC7959231992324000AE7FD0 /* AF2OAuth1Client */,
 				1A44513B18D1A74D00602376 /* AFNetworking */,
 			);
 			name = Vendor;
-			sourceTree = "<group>";
-		};
-		F8E8694416ADDA1900CD328E /* AFOAuth1Client */ = {
-			isa = PBXGroup;
-			children = (
-				F8E8694516ADDA1900CD328E /* AFOAuth1Client.h */,
-				F8E8694616ADDA1900CD328E /* AFOAuth1Client.m */,
-			);
-			name = AFOAuth1Client;
-			path = ../AFOAuth1Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +260,8 @@
 				1A44515118D1A74D00602376 /* AFHTTPSessionManager.m in Sources */,
 				1A44515518D1A74D00602376 /* AFURLRequestSerialization.m in Sources */,
 				1A44515718D1A74D00602376 /* AFURLSessionManager.m in Sources */,
+				BC7959261992324000AE7FD0 /* AF2OAuth1Client.m in Sources */,
 				3B3A8B5B1693A877005B1AAC /* AppDelegate.m in Sources */,
-				F8E8694716ADDA1900CD328E /* AFOAuth1Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +326,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Twitter iOS Example Client/Twitter iOS Example Client-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Twitter iOS Example Client/Twitter iOS Example Client-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -338,6 +339,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Twitter iOS Example Client/Twitter iOS Example Client-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Twitter iOS Example Client/Twitter iOS Example Client-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

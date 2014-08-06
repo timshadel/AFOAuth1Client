@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
-  s.name         = "AFOAuth1Client"
-  s.version      = "0.3.5"
-  s.summary      = "AFNetworking Extension for OAuth 1.0a Authentication."
+  s.name         = "AF2OAuth1Client"
+  s.version      = "0.3.6"
+  s.summary      = "AFNetworking 2 Extension for OAuth 1.0a Authentication."
   s.homepage     = "https://github.com/AYastrebov/AFOAuth1Client"
   s.social_media_url = "https://twitter.com/AFNetworking"
   s.license      = 'MIT'
   s.author       = { 'Mattt Thompson' => 'm@mattt.me' }
-  s.source       = { :git => "https://github.com/AYastrebov/AFOAuth1Client.git", :tag => '0.3.5' }
+  s.source       = { :git => "https://github.com/AYastrebov/AFOAuth1Client.git", :tag => '0.3.6' }
   s.source_files = 'AFOAuth1Client'
   s.requires_arc = true
 

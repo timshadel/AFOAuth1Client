@@ -20,8 +20,8 @@
 		3B95200016944D5B00BAF7F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B951FFF16944D5B00BAF7F8 /* main.m */; };
 		3B95200716944D5B00BAF7F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B95200616944D5B00BAF7F8 /* AppDelegate.m */; };
 		3B95200A16944D5B00BAF7F8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B95200816944D5B00BAF7F8 /* MainMenu.xib */; };
+		BC79592A1992324F00AE7FD0 /* AF2OAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7959291992324F00AE7FD0 /* AF2OAuth1Client.m */; };
 		F83DA16317C579A4006C3DB5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83DA16217C579A4006C3DB5 /* Security.framework */; };
-		F8E8694C16ADDA2800CD328E /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E8694B16ADDA2800CD328E /* AFOAuth1Client.m */; };
 		F8E8695F16ADDE1D00CD328E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E8695E16ADDE1D00CD328E /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,9 +56,9 @@
 		3B95200516944D5B00BAF7F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B95200616944D5B00BAF7F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3B95200916944D5B00BAF7F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BC7959281992324F00AE7FD0 /* AF2OAuth1Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AF2OAuth1Client.h; sourceTree = "<group>"; };
+		BC7959291992324F00AE7FD0 /* AF2OAuth1Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AF2OAuth1Client.m; sourceTree = "<group>"; };
 		F83DA16217C579A4006C3DB5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F8E8694A16ADDA2800CD328E /* AFOAuth1Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAuth1Client.h; sourceTree = "<group>"; };
-		F8E8694B16ADDA2800CD328E /* AFOAuth1Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAuth1Client.m; sourceTree = "<group>"; };
 		F8E8695E16ADDE1D00CD328E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -163,23 +163,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BC7959271992324F00AE7FD0 /* AF2OAuth1Client */ = {
+			isa = PBXGroup;
+			children = (
+				BC7959281992324F00AE7FD0 /* AF2OAuth1Client.h */,
+				BC7959291992324F00AE7FD0 /* AF2OAuth1Client.m */,
+			);
+			name = AF2OAuth1Client;
+			path = ../AF2OAuth1Client;
+			sourceTree = "<group>";
+		};
 		F86035CE16ADCCC60027FDE8 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				F8E8694916ADDA2800CD328E /* AFOAuth1Client */,
+				BC7959271992324F00AE7FD0 /* AF2OAuth1Client */,
 				1A44515818D1A81C00602376 /* AFNetworking */,
 			);
 			name = Vendor;
-			sourceTree = "<group>";
-		};
-		F8E8694916ADDA2800CD328E /* AFOAuth1Client */ = {
-			isa = PBXGroup;
-			children = (
-				F8E8694A16ADDA2800CD328E /* AFOAuth1Client.h */,
-				F8E8694B16ADDA2800CD328E /* AFOAuth1Client.m */,
-			);
-			name = AFOAuth1Client;
-			path = ../AFOAuth1Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +254,8 @@
 				1A44516E18D1A81C00602376 /* AFHTTPSessionManager.m in Sources */,
 				1A44517218D1A81C00602376 /* AFURLRequestSerialization.m in Sources */,
 				1A44517418D1A81C00602376 /* AFURLSessionManager.m in Sources */,
+				BC79592A1992324F00AE7FD0 /* AF2OAuth1Client.m in Sources */,
 				3B95200716944D5B00BAF7F8 /* AppDelegate.m in Sources */,
-				F8E8694C16ADDA2800CD328E /* AFOAuth1Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
