@@ -22,9 +22,9 @@ typedef enum {
 typedef void (^AFServiceProviderRequestHandlerBlock)(NSURLRequest *request);
 typedef void (^AFServiceProviderRequestCompletionBlock)();
 
-@class AFOAuth1Token;
+@class AF2OAuth1Token;
 
-@interface AFOAuth1Client : NSObject <NSCoding, NSCopying>
+@interface AF2OAuth1Client : AFHTTPRequestOperationManager 
 @property (readwrite, nonatomic, copy) NSURL *url;
 @property (readwrite, nonatomic, copy) NSString *key;
 @property (readwrite, nonatomic, copy) NSString *secret;
@@ -48,7 +48,7 @@ typedef void (^AFServiceProviderRequestCompletionBlock)();
 /**
  
  */
-@property (nonatomic, strong) AFOAuth1Token *accessToken;
+@property (nonatomic, strong) AF2OAuth1Token *accessToken;
 
 /**
  
@@ -89,7 +89,7 @@ typedef void (^AFServiceProviderRequestCompletionBlock)();
                                 accessTokenPath:(NSString *)accessTokenPath
                                    accessMethod:(NSString *)accessMethod
                                           scope:(NSString *)scope
-                                        success:(void (^)(AFOAuth1Token *accessToken, id responseObject))success
+                                        success:(void (^)(AF2OAuth1Token *accessToken, id responseObject))success
                                         failure:(void (^)(NSError *error))failure;
 
 /**
@@ -99,16 +99,16 @@ typedef void (^AFServiceProviderRequestCompletionBlock)();
                              callbackURL:(NSURL *)url
                             accessMethod:(NSString *)accessMethod
                                    scope:(NSString *)scope
-                                 success:(void (^)(AFOAuth1Token *requestToken, id responseObject))success
+                                 success:(void (^)(AF2OAuth1Token *requestToken, id responseObject))success
                                  failure:(void (^)(NSError *error))failure;
 
 /**
  
  */
 - (void)acquireOAuthAccessTokenWithPath:(NSString *)path
-                           requestToken:(AFOAuth1Token *)requestToken
+                           requestToken:(AF2OAuth1Token *)requestToken
                            accessMethod:(NSString *)accessMethod
-                                success:(void (^)(AFOAuth1Token *accessToken, id responseObject))success
+                                success:(void (^)(AF2OAuth1Token *accessToken, id responseObject))success
                                 failure:(void (^)(NSError *error))failure;
 
 ///----------------------------------------------------
@@ -141,7 +141,7 @@ extern NSString * const kAFApplicationLaunchOptionsURLKey;
 /**
  
  */
-@interface AFOAuth1Token : NSObject <NSCoding, NSCopying>
+@interface AF2OAuth1Token : NSObject <NSCoding, NSCopying>
 
 /**
  
@@ -207,7 +207,7 @@ extern NSString * const kAFApplicationLaunchOptionsURLKey;
  
  @return Whether or not the credential was stored in the keychain.
  */
-+ (BOOL)storeCredential:(AFOAuth1Token *)credential
++ (BOOL)storeCredential:(AF2OAuth1Token *)credential
          withIdentifier:(NSString *)identifier;
 
 /**
@@ -219,7 +219,7 @@ extern NSString * const kAFApplicationLaunchOptionsURLKey;
  
  @return Whether or not the credential was stored in the keychain.
  */
-+ (BOOL)storeCredential:(AFOAuth1Token *)credential
++ (BOOL)storeCredential:(AF2OAuth1Token *)credential
          withIdentifier:(NSString *)identifier
       withAccessibility:(id)securityAccessibility;
 
@@ -230,7 +230,7 @@ extern NSString * const kAFApplicationLaunchOptionsURLKey;
  
  @return The retrieved OAuth token.
  */
-+ (AFOAuth1Token *)retrieveCredentialWithIdentifier:(NSString *)identifier;
++ (AF2OAuth1Token *)retrieveCredentialWithIdentifier:(NSString *)identifier;
 
 /**
  Deletes the OAuth token stored with the specified service identifier from the Keychain.

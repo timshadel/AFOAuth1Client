@@ -23,11 +23,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "AFOAuth1Client.h"
+#import "AF2OAuth1Client.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (weak) IBOutlet NSWindow *window;
-@property (strong) AFOAuth1Client *twitterClient;
+@property (strong) AF2OAuth1Client *twitterClient;
 
 @end

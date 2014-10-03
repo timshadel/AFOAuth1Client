@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "group:AFOAuth1Client"
-      name = "AFOAuth1Client">
+      location = "group:AF2OAuth1Client"
+      name = "AF2OAuth1Client">
       <FileRef
-         location = "group:AFOAuth1Client.h">
+         location = "group:AF2OAuth1Client.h">
       </FileRef>
       <FileRef
-         location = "group:AFOAuth1Client.m">
+         location = "group:AF2OAuth1Client.m">
       </FileRef>
    </Group>
    <FileRef

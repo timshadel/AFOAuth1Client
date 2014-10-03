@@ -24,11 +24,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AFOAuth1Client.h"
+#import "AF2OAuth1Client.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) AFOAuth1Client *twitterClient;
+@property (strong, nonatomic) AF2OAuth1Client *twitterClient;
 
 @end
